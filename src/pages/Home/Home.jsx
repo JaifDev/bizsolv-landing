@@ -39,9 +39,12 @@ const Home = () => {
         <div className="first-left-container">
           <h1>
             Connecting Industries and Consultants
-            <br /> across the world and empowering growth
+            <br /> across the world
           </h1>
-          <h3>Redefining Business Consultation for Every Industry</h3>
+          <h3>
+            Redefining Business Consultation for Every Industry and empowering
+            growth
+          </h3>
           <TypingAnimation />
 
           <img src={bg1Home} alt="" />
@@ -56,11 +59,11 @@ const Home = () => {
           >
             <a href="https://consultation.bizsolv.com/en/customer_signup">
               <div id="button" className="no-bg">
-                Client Sign Up
+                Client Sign Up/Sign In
               </div>
             </a>
             <a href="https://consultation.bizsolv.com/en/expert_signup">
-              <div id="button">Consultant Sign Up</div>
+              <div id="button">Consultant Sign Up/Sign In</div>
             </a>
           </div>
         </div>
