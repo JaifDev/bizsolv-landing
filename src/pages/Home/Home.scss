@@ -27,7 +27,8 @@
         font-size: 3.5rem;
 
         @include mobile {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
+          padding: 15px 20px;
         }
       }
 
@@ -60,6 +61,7 @@
 
           @include mobile {
             font-size: 1rem;
+            padding: 0 20px;
           }
         }
       }

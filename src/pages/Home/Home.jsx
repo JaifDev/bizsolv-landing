@@ -37,10 +37,7 @@ const Home = () => {
     <div className="home">
       <div className="first-container">
         <div className="first-left-container">
-          <h1>
-            Connecting Industries and Consultants
-            <br /> across the world
-          </h1>
+          <h1>Connecting Industries and Consultants Worldwide</h1>
           <h3>
             Redefining Business Consultation for Every Industry and empowering
             growth
