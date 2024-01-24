@@ -40,6 +40,10 @@ const Home = () => {
             Redefining Business Consultation
             <br /> for Every Industry
           </h1>
+          <h3>
+            Connecting Industries and Consultants <br /> across the world and
+            empowering growth.
+          </h3>
           <div className="typing-container">
             <h3>#No Joining Fee #No Subscription Fee</h3>
           </div>
