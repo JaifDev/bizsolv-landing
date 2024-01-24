@@ -39,8 +39,8 @@ const Home = () => {
         <div className="first-left-container">
           <h1>Connecting Industries and Consultants Worldwide</h1>
           <h3>
-            Redefining Business Consultation for Every Industry and empowering
-            growth
+            Redefining Business Consultation for Every Industry and Empowering
+            Growth
           </h3>
           <TypingAnimation />
 
