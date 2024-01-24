@@ -1,0 +1,58 @@
+@import "../../index.scss";
+
+.navbar {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 50px;
+
+  .menu-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-right: 10px;
+
+    .nav-links {
+      padding: 10px;
+      &:hover {
+        border-radius: 5px;
+        font-weight: 500;
+        color: $third;
+      }
+    }
+
+    .nav-items {
+      border: 1px solid transparent;
+      border-radius: 5px;
+      padding: 10px;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $third;
+      }
+      &.sign-up {
+        border: 1px solid $third;
+        background-color: $third;
+        color: #fff;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

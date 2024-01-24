@@ -1,0 +1,67 @@
+@import "../index.scss";
+.mobile-menu-container {
+  position: fixed;
+  top: 100px;
+  right: -100%; /* Start off-screen to the right */
+  width: 100%; /* Adjust the width as needed */
+  height: 100%;
+  background-color: #efefef; /* Adjust background color as needed */
+  transition: right 0.3s ease-in-out;
+  z-index: 100;
+  &.slide-in {
+    right: 0;
+  }
+
+  &.slide-out {
+    right: -100%;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 75%;
+    gap: 25px;
+    margin-right: 10px;
+
+    .nav-links {
+      padding: 10px;
+      font-size: larger;
+      width: 80%;
+      text-align: center;
+      &:hover {
+        border-radius: 5px;
+        font-weight: 500;
+        color: $third;
+      }
+    }
+
+    .nav-items {
+      border: 1px solid transparent;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: larger;
+      width: 80%;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $third;
+      }
+      &.sign-up {
+        border: 1px solid $third;
+        background-color: $third;
+        color: #fff;
+        width: 80%;
+        text-align: center;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $primary;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

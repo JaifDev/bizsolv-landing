@@ -1,0 +1,61 @@
+@import "../../index.scss";
+
+.footer {
+  width: 100vw;
+  height: 30vh;
+  background-color: rgba(0, 173, 218, 0.05);
+  border-top: 1px solid $mediumColor;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mobile {
+    height: 40vh;
+  }
+
+  .top {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @include mobile {
+      padding: 40px;
+    }
+
+    .location {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      span {
+        max-width: 50%;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  }
+
+  .bottom {
+    padding-bottom: 20px;
+
+    @include mobile {
+      padding: 40px;
+    }
+  }
+}
