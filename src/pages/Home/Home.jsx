@@ -51,6 +51,7 @@ const Home = () => {
             style={{
               display: "flex",
               gap: 10,
+              alignItems: "center",
             }}
           >
             <a href="https://consultation.bizsolv.com/en/customer_signup">

@@ -71,10 +71,17 @@
         right: 0;
 
         @include mobile {
-          width: 300px;
+          width: 250px;
           left: 50%;
           transform: translateX(-50%);
           bottom: 0;
+        }
+      }
+
+      .links{
+        @include mobile {
+          flex-direction: column;
+          align-items: center;
         }
       }
 
@@ -86,6 +93,12 @@
         color: $primary;
         font-weight: bold;
         border: 1px solid $third;
+        width: 200px;
+        text-align: center;
+
+        @include mobile {
+          padding: 15px;
+        }
 
         &:hover {
           background-color: $primary;
@@ -93,11 +106,11 @@
           color: $secondary;
         }
 
-        &.no-bg{
+        &.no-bg {
           background-color: $primary;
           color: $secondary;
 
-          &:hover{
+          &:hover {
             color: $third;
           }
         }
