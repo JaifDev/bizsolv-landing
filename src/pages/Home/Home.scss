@@ -271,12 +271,11 @@
 
   .fifth-container {
     width: 100vw;
-    height: 75vh;
     overflow: hidden;
     padding: 0 50px;
+    padding-bottom: 50px;
 
     @include mobile {
-      height: 85vh;
       padding: 0 20px;
     }
 
