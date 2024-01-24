@@ -338,7 +338,11 @@
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), #ffffff);
 
     @include mobile {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 90%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 90%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
 
     @include mobile {
@@ -370,14 +374,66 @@
       height: 100vh;
     }
 
-    img#png-img{
+    img#png-img {
       position: absolute;
       width: 50vw;
       bottom: 0;
       right: 0;
 
-      @include mobile{
+      @include mobile {
         width: 110vw;
+      }
+    }
+  }
+
+  .seventh-container {
+    width: 100vw;
+    height: 65vh;
+    overflow: hidden;
+    position: relative;
+
+    @include mobile{
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: $secondary;
+      text-align: center;
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    .highlights-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @include mobile{
+        flex-direction: column;
+      }
+
+      .highlight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        img{
+          width: 80px;
+          height: 80px;
+        }
+        span{
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+        p{
+          max-width: 50%;
+          text-align: center;
+          @include mobile{
+            max-width: 80%;
+          }
+        }
       }
     }
   }

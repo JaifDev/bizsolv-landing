@@ -9,6 +9,10 @@ import {
 } from "../../constants/howItWorks";
 import { areaOfSpecialisation } from "../../constants/areaOfSpecialisation";
 
+import consultationIcon from "../../assets/icons/consultation.png";
+import choursesIcon from "../../assets/icons/courses.png";
+import sessionsIcon from "../../assets/icons/sessions.png";
+
 const Home = () => {
   const [activeTab, setActiveTab] = useState(1);
 
@@ -47,6 +51,41 @@ const Home = () => {
           </a>
         </div>
       </div>
+      <div className="seventh-container">
+        <h1>
+          Empowering Engagement, <br />
+          <b style={{ color: "#00adda" }}>Seamlessly Connet Through </b>
+        </h1>
+
+        <div className="highlights-container">
+          <div className="highlight">
+            <img src={consultationIcon} alt="" />
+            <span>Consultation</span>
+            <p>
+              Personalised 1-on-1 sessions conducted through chat, audio , and
+              video interfaces.
+            </p>
+          </div>
+          <div className="highlight">
+            <img src={choursesIcon} alt="" />
+            <span>Courses</span>
+            <p>
+              Knowledge-sharing experiences designed for a broader audience,
+              delivered in various formats including text, video, content and
+              interactive quizzes
+            </p>
+          </div>
+          <div className="highlight">
+            <img src={sessionsIcon} alt="" />
+            <span>Sessions</span>
+            <p>
+              Live webinars providing a one-to-many interaction platform for
+              engaging and informative discussions
+            </p>
+          </div>
+        </div>
+      </div>
+
       <div id="about" className="second-container">
         <h1>
           About <b style={{ color: "#00adda" }}>BizSolv</b>

@@ -11,15 +11,13 @@ const Root = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
 
-    document.documentElement.style.overflow = isMenuOpen ? 'auto' : 'hidden';
+    document.documentElement.style.overflow = isMenuOpen ? "auto" : "hidden";
   };
 
-  useEffect(() => {
-    
-  },[isMenuOpen])
+  useEffect(() => {}, [isMenuOpen]);
 
   return (
-    <div className="root">
+    <div className="root" style={{ flex: 1 }}>
       <Navbar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <MobileNav toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       <Outlet />
