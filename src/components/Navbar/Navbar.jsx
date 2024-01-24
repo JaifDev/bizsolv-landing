@@ -9,9 +9,7 @@ import "./Navbar.scss";
 const Navbar = ({
   isMenuOpen,
   toggleMenu,
-  isHoveredOrClicked,
   handleClick,
-  handleHover,
 }) => {
   const [isMobileActive, setIsMobileActive] = useState(
     window.innerWidth <= 768

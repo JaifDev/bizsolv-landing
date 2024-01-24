@@ -39,16 +39,29 @@ const Home = () => {
         <div className="first-left-container">
           <h1>
             Connecting Industries and Consultants
-            <br /> across the world and empowering growth.
+            <br /> across the world and empowering growth
           </h1>
           <h3>Redefining Business Consultation for Every Industry</h3>
           <TypingAnimation />
 
           <img src={bg1Home} alt="" />
 
-          <a href="http://consultation.bizsolv.com">
-            <div id="button">Get Started</div>
-          </a>
+          <div
+            className="links"
+            style={{
+              display: "flex",
+              gap: 10,
+            }}
+          >
+            <a href="https://consultation.bizsolv.com/en/customer_signup">
+              <div id="button" className="no-bg">
+                Client Sign Up
+              </div>
+            </a>
+            <a href="https://consultation.bizsolv.com/en/expert_signup">
+              <div id="button">Consultant Sign Up</div>
+            </a>
+          </div>
         </div>
       </div>
       <div className="seventh-container">
@@ -221,7 +234,7 @@ const Home = () => {
 
       <div className="sixth-container">
         <h1>
-          BizSolv helps Global <b style={{ color: "#00adda" }}>{text}.</b>
+          BizSolv helps Global <b style={{ color: "#00adda" }}>{text}</b>
         </h1>
 
         <img src={bgSixth} alt="" id="background" />

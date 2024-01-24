@@ -92,6 +92,15 @@
           cursor: pointer;
           color: $secondary;
         }
+
+        &.no-bg{
+          background-color: $primary;
+          color: $secondary;
+
+          &:hover{
+            color: $third;
+          }
+        }
       }
     }
   }
