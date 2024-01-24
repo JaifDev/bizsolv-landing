@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import menuIcon from "../../assets/menu.png";
 import closeIcon from "../../assets/close.png";
@@ -51,9 +52,9 @@ const Navbar = ({
         <div className="nav-right">
           {navItems?.map((nav) => {
             return (
-              <a className="nav-links" href={nav.path} key={nav.id}>
+              <Link className="nav-links" to={nav.path} key={nav.id}>
                 {nav.title}
-              </a>
+              </Link>
             );
           })}
 

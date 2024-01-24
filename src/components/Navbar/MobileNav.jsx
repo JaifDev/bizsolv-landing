@@ -1,6 +1,7 @@
 import React from "react";
 import "../../pages/Home/Home.scss";
 import { navItems } from "../../constants/navItems";
+import { Link } from "react-router-dom";
 
 const MobileNav = ({
   isMenuOpen,
@@ -20,14 +21,14 @@ const MobileNav = ({
       <div className="nav-right">
         {navItems?.map((nav) => {
           return (
-            <a
+            <Link
               className="nav-links"
-              href={nav.path}
+              to={nav.path}
               key={nav.id}
               onClick={toggleMenu}
             >
               {nav.title}
-            </a>
+            </Link>
           );
         })}
 
