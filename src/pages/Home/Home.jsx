@@ -12,6 +12,7 @@ import { areaOfSpecialisation } from "../../constants/areaOfSpecialisation";
 import consultationIcon from "../../assets/icons/consultation.png";
 import choursesIcon from "../../assets/icons/courses.png";
 import sessionsIcon from "../../assets/icons/sessions.png";
+import TypingAnimation from "../../components/TypingAnimation";
 
 const Home = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -37,16 +38,11 @@ const Home = () => {
       <div className="first-container">
         <div className="first-left-container">
           <h1>
-            Redefining Business Consultation
-            <br /> for Every Industry
+            Connecting Industries and Consultants
+            <br /> across the world and empowering growth.
           </h1>
-          <h3>
-            Connecting Industries and Consultants <br /> across the world and
-            empowering growth.
-          </h3>
-          <div className="typing-container">
-            <h3>#No Joining Fee #No Subscription Fee</h3>
-          </div>
+          <h3>Redefining Business Consultation for Every Industry</h3>
+          <TypingAnimation />
 
           <img src={bg1Home} alt="" />
 
@@ -125,7 +121,7 @@ const Home = () => {
 
       <div className="third-container">
         <h1>
-          Industries we <b style={{ color: "#00adda" }}>serve</b>
+          Industries for <b style={{ color: "#00adda" }}>Consultation</b>
         </h1>
         <div className="industry-serve">
           {industries.map((industry, index) => {
@@ -167,13 +163,15 @@ const Home = () => {
           {activeTab === 1
             ? howItWorksConsultation.map((val) => {
                 return (
-                  <div className="content" key={val.id}>
-                    <img src={val.img} alt="" />
-                    <div className="content-desc">
-                      <h3>{val.title}</h3>
-                      <p>{val.description}</p>
+                  <>
+                    <div className="content" key={val.id}>
+                      <img src={val.img} alt="" />
+                      <div className="content-desc">
+                        <h3>{val.title}</h3>
+                        <p>{val.description}</p>
+                      </div>
                     </div>
-                  </div>
+                  </>
                 );
               })
             : activeTab === 2 &&
@@ -189,12 +187,24 @@ const Home = () => {
                 );
               })}
         </div>
+        <div className="cta-container">
+          <a
+            href={
+              activeTab === 1
+                ? "https://consultation.bizsolv.com/en/expert_signup"
+                : "https://consultation.bizsolv.com/en/customer_signup"
+            }
+            className="cta"
+          >
+            {activeTab === 1 ? "Consultant" : "Customer"} Sign Up
+          </a>
+        </div>
       </div>
 
       <div className="fifth-container">
         <h1>
           Area of{" "}
-          <b style={{ color: "#00adda" }}>specialization of Consultants.</b>
+          <b style={{ color: "#00adda" }}>specialization of Consultants</b>
         </h1>
 
         <div className="industry-serve">

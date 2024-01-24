@@ -6,7 +6,13 @@ import { bizSolvLogo } from "../../constants/photots";
 import { navItems } from "../../constants/navItems";
 import "./Navbar.scss";
 
-const Navbar = ({ isMenuOpen, toggleMenu }) => {
+const Navbar = ({
+  isMenuOpen,
+  toggleMenu,
+  isHoveredOrClicked,
+  handleClick,
+  handleHover,
+}) => {
   const [isMobileActive, setIsMobileActive] = useState(
     window.innerWidth <= 768
   );
@@ -54,16 +60,20 @@ const Navbar = ({ isMenuOpen, toggleMenu }) => {
           })}
 
           <a
-            href="https://consultation.bizsolv.com/en/login"
             className="nav-items"
+            onClick={() => {
+              handleClick(1);
+            }}
           >
-            Sign Up Client
+            Sign Up
           </a>
           <a
-            href="https://consultation.bizsolv.com/en/expert_signup"
             className="nav-items sign-up"
+            onClick={() => {
+              handleClick(2);
+            }}
           >
-            Sign Up Expert
+            Sign In
           </a>
         </div>
       )}

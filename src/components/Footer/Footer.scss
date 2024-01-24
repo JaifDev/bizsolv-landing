@@ -12,7 +12,7 @@
   justify-content: space-between;
 
   @include mobile {
-    height: 40vh;
+    height: 30vh;
   }
 
   .top {
@@ -25,27 +25,13 @@
       padding: 40px;
     }
 
-    .location {
-      display: flex;
-      align-items: flex-start;
-      gap: 5px;
-
-      img {
-        width: 20px;
-        height: 20px;
-      }
-      span {
-        max-width: 50%;
-      }
-    }
-
     .links {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 25px;
 
       @include mobile {
-        flex-direction: column;
         gap: 10px;
       }
     }

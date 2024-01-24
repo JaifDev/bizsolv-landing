@@ -1,10 +1,16 @@
 import React from "react";
-import closeIcon from "../../assets/close.png";
-import { bizSolvLogo } from "../../constants/photots";
 import "../../pages/Home/Home.scss";
 import { navItems } from "../../constants/navItems";
 
-const MobileNav = ({ isMenuOpen, toggleMenu }) => {
+const MobileNav = ({
+  isMenuOpen,
+  toggleMenu,
+  isHoveredOrClickedSignIn,
+  isHoveredOrClickedSignUp,
+  handleClick,
+  setIsHoveredOrClickedSignIn,
+  setIsHoveredOrClickedSignUp,
+}) => {
   return (
     <div
       className={`mobile-menu-container ${
@@ -14,21 +20,74 @@ const MobileNav = ({ isMenuOpen, toggleMenu }) => {
       <div className="nav-right">
         {navItems?.map((nav) => {
           return (
-            <a className="nav-links" href={nav.path} key={nav.id} onClick={toggleMenu}>
+            <a
+              className="nav-links"
+              href={nav.path}
+              key={nav.id}
+              onClick={toggleMenu}
+            >
               {nav.title}
             </a>
           );
         })}
 
-        <a href="" className="nav-items">
-          Sign In
-        </a>
         <a
-          href="https://consultation.bizsolv.com/en/expert_signup"
-          className="nav-items sign-up"
+          className="nav-items"
+          onClick={() => {
+            handleClick(1);
+          }}
         >
           Sign Up
         </a>
+
+        {isHoveredOrClickedSignUp && (
+          <div
+            className="overlay-mobile"
+            onClick={() => {
+              setIsHoveredOrClickedSignIn(false);
+              setIsHoveredOrClickedSignUp(false);
+            }}
+          >
+            <>
+              <a href="https://consultation.bizsolv.com/en/customer_signup">
+                Client SignUp
+              </a>
+              <a href="https://consultation.bizsolv.com/en/expert_signup">
+                Consultant SignUp
+              </a>
+            </>
+          </div>
+        )}
+
+        <a
+          className="nav-items sign-up"
+          onClick={() => {
+            handleClick(2);
+          }}
+        >
+          Sign In
+        </a>
+
+        {isHoveredOrClickedSignIn && (
+          <div
+            className="overlay-mobile"
+            onClick={() => {
+              setIsHoveredOrClickedSignIn(false);
+              setIsHoveredOrClickedSignUp(false);
+            }}
+          >
+            {isHoveredOrClickedSignIn && (
+              <>
+                <a href="https://consultation.bizsolv.com/login?is_expert=0">
+                  Client Login
+                </a>
+                <a href="https://consultation.bizsolv.com/login?is_expert=1">
+                  Consultant Login
+                </a>
+              </>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

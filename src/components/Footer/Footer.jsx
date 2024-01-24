@@ -28,15 +28,6 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="top">
-        <div className="location">
-          <img src={locationIcon} alt="" />
-
-          <span>
-            W1 A1 901, Vasathi Avante, Near Manyata Tech Park backside gate,
-            Mestripalya, Rachenahalli, Bangalore, Karnataka, India 560077
-          </span>
-        </div>
-
         <div className="links">
           {socialLinks.map((link) => {
             return (
